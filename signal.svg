@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="260" viewBox="0 0 760 260"
+  font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="13">
+
+  <!-- vst3 / au plugins -->
+  <text x="20" y="28"  fill="#3fb950" font-size="15">◎</text>
+  <text x="44" y="28"  fill="#e6edf3" font-weight="600">vst3 / au plugins</text>
+  <text x="340" y="28" fill="#6e7681">juce  ·  c++</text>
+  <text x="60" y="52"  fill="#8b949e">granular pitch  ·  mastering  ·  convolution  ·  reverb</text>
+
+  <!-- mac utilities -->
+  <text x="20" y="92"  fill="#3fb950" font-size="15">◎</text>
+  <text x="44" y="92"  fill="#e6edf3" font-weight="600">mac utilities</text>
+  <text x="340" y="92" fill="#6e7681">swiftui  ·  tauri + rust</text>
+  <text x="60" y="116" fill="#8b949e">preset managers  ·  kit organizers  ·  cleaners</text>
+
+  <!-- discord mods -->
+  <text x="20" y="156"  fill="#3fb950" font-size="15">◎</text>
+  <text x="44" y="156"  fill="#e6edf3" font-weight="600">discord mods</text>
+  <text x="340" y="156" fill="#6e7681">typescript</text>
+  <text x="60" y="180"  fill="#8b949e">betterdiscord patches when I need them</text>
+
+  <!-- web -->
+  <text x="20" y="220"  fill="#3fb950" font-size="15">◎</text>
+  <text x="44" y="220"  fill="#e6edf3" font-weight="600">web</text>
+  <text x="340" y="220" fill="#6e7681">next.js  ·  three.js</text>
+  <text x="60" y="244"  fill="#8b949e">small, dark, minimal</text>
+</svg>
