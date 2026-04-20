@@ -18,27 +18,25 @@
 
 </div>
 
-### ▸ focus
+### ▸ what I build
 
 ```
-plugins        →   JUCE  ·  C++
-desktop apps   →   Rust  ·  Tauri  ·  SwiftUI
-web            →   TypeScript  ·  Next.js  ·  Three.js
-dsp            →   granular  ·  pitch-shifting  ·  convolution  ·  mastering
-build          →   CMake  ·  cargo  ·  xcodebuild  ·  pnpm
+audio plugins     →   VST3 / AU — pitch, granular, convolution, mastering
+                      built with JUCE · runs in any DAW (FL, Ableton, Logic…)
+
+mac utilities     →   native tools for producers — preset managers,
+                      kit organizers, system cleaners · SwiftUI + Tauri
+
+discord plugins   →   BetterDiscord mods when a feature I want is missing
+
+web               →   small dark-aesthetic sites · Next.js + Three.js
 ```
 
-### ▸ playing with
+### ▸ how I ship
 
-<div align="center">
-
-<img src="https://img.shields.io/badge/-JUCE%208-000000?style=flat-square&logo=c%2B%2B&logoColor=white" />
-<img src="https://img.shields.io/badge/-Next.js%2016-000000?style=flat-square&logo=next.js&logoColor=white" />
-<img src="https://img.shields.io/badge/-Tauri%202-000000?style=flat-square&logo=tauri&logoColor=white" />
-<img src="https://img.shields.io/badge/-Three.js-000000?style=flat-square&logo=three.js&logoColor=white" />
-<img src="https://img.shields.io/badge/-Claude%20Code-000000?style=flat-square&logo=anthropic&logoColor=white" />
-
-</div>
+solo work — most of the heavy lifting happens with claude code in the loop.
+the model drafts fast, I keep the calls on dsp correctness, product
+decisions, and what's actually worth shipping.
 
 ### ▸ activity
 
@@ -56,15 +54,3 @@ build          →   CMake  ·  cargo  ·  xcodebuild  ·  pnpm
 <img src="https://github-readme-streak-stats.demolab.com?user=saideyb&theme=black&hide_border=true&background=0d1117&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakLabel=ffffff&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ffffff&dates=888888" height="140" />
 
 </div>
-
-### ▸ workflow
-
-```
-→   agentic development  ·  LLM-paired  ·  human-in-the-loop
-→   claude-code drives architecture, implementation, and refactors
-→   human calls: taste, dsp correctness, product decisions, shipping
-```
-
-> shipping real plugins and apps with an LLM in the loop — not prompting
-> to ship, pairing to ship. the model drafts, the human reviews and owns
-> the outcome.
