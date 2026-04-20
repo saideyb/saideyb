@@ -57,14 +57,14 @@ build          →   CMake  ·  cargo  ·  xcodebuild  ·  pnpm
 
 </div>
 
----
+### ▸ workflow
 
-<div align="center">
+```
+→   agentic development  ·  LLM-paired  ·  human-in-the-loop
+→   claude-code drives architecture, implementation, and refactors
+→   human calls: taste, dsp correctness, product decisions, shipping
+```
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" alt="quote" width="640" />
-
-<br><br>
-
-<samp>▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞</samp>
-
-</div>
+> shipping real plugins and apps with an LLM in the loop — not prompting
+> to ship, pairing to ship. the model drafts, the human reviews and owns
+> the outcome.
