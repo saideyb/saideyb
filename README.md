@@ -10,6 +10,12 @@
 
 ---
 
+### ▸ about
+
+producer + dev. I make beats on the side, so the plugins and tools here
+are the ones I actually reach for when I'm making something. eat your
+own cooking.
+
 ### ▸ stack
 
 <div align="center">
