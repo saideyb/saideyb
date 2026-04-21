@@ -1,8 +1,4 @@
-```
-◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠
- signal log  ·  side a                               23:14
-◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠
-```
+<img src="./hero.svg" alt="audio software · for music producers · made by one" width="760" />
 
 ### now playing
 

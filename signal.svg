@@ -18,29 +18,45 @@
   </style>
 
   <!-- 01 · vst3 / au plugins -->
-  <circle cx="26" cy="24" r="6"   class="ring" />
-  <circle cx="26" cy="24" r="2.2" class="dot"  />
+  <circle cx="26" cy="24" r="6" class="ring">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" begin="0s"   repeatCount="indefinite"/>
+  </circle>
+  <circle cx="26" cy="24" r="2.2" class="dot">
+    <animate attributeName="r" values="2.2;3.2;2.2" dur="2.4s" begin="0s"   repeatCount="indefinite"/>
+  </circle>
   <text x="46"  y="28" class="title">vst3 / au plugins</text>
   <text x="340" y="28" class="meta">juce  ·  c++</text>
   <text x="46"  y="52" class="sub">  granular pitch  ·  mastering  ·  convolution  ·  reverb</text>
 
   <!-- 02 · mac utilities -->
-  <circle cx="26" cy="88" r="6"   class="ring" />
-  <circle cx="26" cy="88" r="2.2" class="dot"  />
+  <circle cx="26" cy="88" r="6" class="ring">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="26" cy="88" r="2.2" class="dot">
+    <animate attributeName="r" values="2.2;3.2;2.2" dur="2.4s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
   <text x="46"  y="92" class="title">mac utilities</text>
   <text x="340" y="92" class="meta">swiftui  ·  tauri + rust</text>
   <text x="46"  y="116" class="sub">  preset managers  ·  kit organizers  ·  cleaners</text>
 
   <!-- 03 · discord mods -->
-  <circle cx="26" cy="152" r="6"   class="ring" />
-  <circle cx="26" cy="152" r="2.2" class="dot"  />
+  <circle cx="26" cy="152" r="6" class="ring">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="26" cy="152" r="2.2" class="dot">
+    <animate attributeName="r" values="2.2;3.2;2.2" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
   <text x="46"  y="156" class="title">discord mods</text>
   <text x="340" y="156" class="meta">typescript</text>
   <text x="46"  y="180" class="sub">  betterdiscord patches when I need them</text>
 
   <!-- 04 · web -->
-  <circle cx="26" cy="216" r="6"   class="ring" />
-  <circle cx="26" cy="216" r="2.2" class="dot"  />
+  <circle cx="26" cy="216" r="6" class="ring">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.4s" begin="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="26" cy="216" r="2.2" class="dot">
+    <animate attributeName="r" values="2.2;3.2;2.2" dur="2.4s" begin="1.8s" repeatCount="indefinite"/>
+  </circle>
   <text x="46"  y="220" class="title">web</text>
   <text x="340" y="220" class="meta">next.js  ·  three.js</text>
   <text x="46"  y="244" class="sub">  small, dark, minimal</text>
