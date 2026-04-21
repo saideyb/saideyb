@@ -11,8 +11,8 @@
 ### b-side
 
 ```
-producer on the side — the tools here are the tools I use.
+producer on the side — the tools here are the tools I reach for.
 
 pair-coded with claude code.
-drafts from the model, decisions from me.
+drafts from the model, decisions stay with me.
 ```
