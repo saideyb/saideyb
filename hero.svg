@@ -7,58 +7,95 @@
             font-size: 13px; letter-spacing: 0.04em; }
     .t3   { fill: #6e7681; font-family: ui-monospace, "SF Mono", Menlo, monospace;
             font-size: 12px; letter-spacing: 0.04em; }
-    .bar  { fill: #2da44e; }
+    .peak { fill: #8b949e; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+            font-size: 9px; letter-spacing: 0.15em; }
     .base { stroke: #d0d7de; }
+    .clipzone { stroke: #d1424a; }
 
     @media (prefers-color-scheme: dark) {
-      .t1   { fill: #e6edf3; }
-      .t2   { fill: #8b949e; }
-      .t3   { fill: #6e7681; }
-      .bar  { fill: #3fb950; }
-      .base { stroke: #30363d; }
+      .t1       { fill: #e6edf3; }
+      .t2       { fill: #8b949e; }
+      .t3       { fill: #6e7681; }
+      .peak     { fill: #6e7681; }
+      .base     { stroke: #30363d; }
+      .clipzone { stroke: #ff6b6b; }
     }
   </style>
 
+  <!-- headline + subtitles -->
   <text x="30" y="60"  class="t1">audio software</text>
   <text x="30" y="92"  class="t2">for music producers · made by one</text>
   <text x="30" y="118" class="t3">vst3 / au plugins  ·  mac tools  ·  discord mods  ·  web</text>
 
-  <!-- animated VU bars, bottom-anchored to y=120 -->
+  <!-- CLIP led indicator -->
+  <circle cx="702" cy="26" r="3.5" fill="#ff4136">
+    <animate attributeName="opacity"
+      values="0.15;0.15;0.15;1;0.15;0.15;0.15;0.15;1;0.15;0.15;0.15;1;0.15"
+      dur="4.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="702" y="44" class="peak" text-anchor="middle">CLIP</text>
+
+  <!-- clip-zone threshold line (subtle, dashed) -->
+  <line x1="608" y1="58" x2="702" y2="58" class="clipzone" stroke-width="0.6"
+        stroke-dasharray="2 3" opacity="0.35"/>
+
+  <!-- 8 VU bars · bottom-anchored at y≈122 · some keyframes push past y=58 (clip!) -->
   <g transform="translate(608, 0)">
-    <rect class="bar" x="0"  y="80" width="6" height="40" rx="1">
-      <animate attributeName="height" values="20;46;28;40;24;48;22;42;20" dur="1.7s" repeatCount="indefinite"/>
-      <animate attributeName="y"      values="100;74;92;80;96;72;98;78;100" dur="1.7s" repeatCount="indefinite"/>
+    <!-- bar 0 — clips at keyframe 5 -->
+    <rect x="0"  y="80" width="6" height="40" rx="1" fill="#2da44e">
+      <animate attributeName="height" values="22;46;28;40;24;62;22;42;22" dur="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="y"      values="98;74;92;80;96;58;98;78;98" dur="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="fill"   values="#2da44e;#2da44e;#2da44e;#2da44e;#2da44e;#ff4136;#2da44e;#2da44e;#2da44e"
+                                       dur="1.7s" repeatCount="indefinite"/>
     </rect>
-    <rect class="bar" x="12" y="70" width="6" height="50" rx="1">
+
+    <!-- bar 1 — borderline, stays green -->
+    <rect x="12" y="70" width="6" height="50" rx="1" fill="#2da44e">
       <animate attributeName="height" values="34;22;46;30;42;26;48;32;34" dur="2.0s" repeatCount="indefinite"/>
       <animate attributeName="y"      values="86;98;74;90;78;94;72;88;86" dur="2.0s" repeatCount="indefinite"/>
     </rect>
-    <rect class="bar" x="24" y="60" width="6" height="60" rx="1">
+
+    <!-- bar 2 -->
+    <rect x="24" y="60" width="6" height="60" rx="1" fill="#2da44e">
       <animate attributeName="height" values="30;42;24;50;28;46;32;38;30" dur="1.5s" repeatCount="indefinite"/>
       <animate attributeName="y"      values="90;78;96;70;92;74;88;82;90" dur="1.5s" repeatCount="indefinite"/>
     </rect>
-    <rect class="bar" x="36" y="72" width="6" height="48" rx="1">
-      <animate attributeName="height" values="24;38;44;26;42;30;46;34;24" dur="2.3s" repeatCount="indefinite"/>
-      <animate attributeName="y"      values="96;82;76;94;78;90;74;86;96" dur="2.3s" repeatCount="indefinite"/>
+
+    <!-- bar 3 — clips at keyframe 6 -->
+    <rect x="36" y="72" width="6" height="48" rx="1" fill="#2da44e">
+      <animate attributeName="height" values="24;38;44;26;42;30;64;34;24" dur="2.3s" repeatCount="indefinite"/>
+      <animate attributeName="y"      values="96;82;76;94;78;90;56;86;96" dur="2.3s" repeatCount="indefinite"/>
+      <animate attributeName="fill"   values="#2da44e;#2da44e;#2da44e;#2da44e;#2da44e;#2da44e;#ff4136;#2da44e;#2da44e"
+                                       dur="2.3s" repeatCount="indefinite"/>
     </rect>
-    <rect class="bar" x="48" y="64" width="6" height="56" rx="1">
+
+    <!-- bar 4 -->
+    <rect x="48" y="64" width="6" height="56" rx="1" fill="#2da44e">
       <animate attributeName="height" values="38;28;24;44;32;48;26;40;38" dur="1.9s" repeatCount="indefinite"/>
       <animate attributeName="y"      values="82;92;96;76;88;72;94;80;82" dur="1.9s" repeatCount="indefinite"/>
     </rect>
-    <rect class="bar" x="60" y="78" width="6" height="42" rx="1">
+
+    <!-- bar 5 -->
+    <rect x="60" y="78" width="6" height="42" rx="1" fill="#2da44e">
       <animate attributeName="height" values="28;46;22;38;26;44;30;36;28" dur="2.1s" repeatCount="indefinite"/>
       <animate attributeName="y"      values="92;74;98;82;94;76;90;84;92" dur="2.1s" repeatCount="indefinite"/>
     </rect>
-    <rect class="bar" x="72" y="82" width="6" height="38" rx="1">
+
+    <!-- bar 6 -->
+    <rect x="72" y="82" width="6" height="38" rx="1" fill="#2da44e">
       <animate attributeName="height" values="22;34;42;26;40;24;44;30;22" dur="1.6s" repeatCount="indefinite"/>
       <animate attributeName="y"      values="98;86;78;94;80;96;76;90;98" dur="1.6s" repeatCount="indefinite"/>
     </rect>
-    <rect class="bar" x="84" y="74" width="6" height="46" rx="1">
-      <animate attributeName="height" values="32;42;28;48;24;38;34;44;32" dur="2.2s" repeatCount="indefinite"/>
-      <animate attributeName="y"      values="88;78;92;72;96;82;86;76;88" dur="2.2s" repeatCount="indefinite"/>
+
+    <!-- bar 7 — clips at keyframe 3 -->
+    <rect x="84" y="74" width="6" height="46" rx="1" fill="#2da44e">
+      <animate attributeName="height" values="32;42;28;66;24;38;34;44;32" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="y"      values="88;78;92;54;96;82;86;76;88" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="fill"   values="#2da44e;#2da44e;#2da44e;#ff4136;#2da44e;#2da44e;#2da44e;#2da44e;#2da44e"
+                                       dur="2.2s" repeatCount="indefinite"/>
     </rect>
   </g>
 
   <!-- baseline under VU bars -->
-  <line x1="608" y1="122" x2="702" y2="122" class="base" stroke-width="0.5"/>
+  <line x1="608" y1="124" x2="702" y2="124" class="base" stroke-width="0.5"/>
 </svg>
